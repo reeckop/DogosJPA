@@ -6,6 +6,7 @@
     <class>itson.dogosjpa.model.HotDog</class>
     <class>itson.dogosjpa.model.NombreCompleto</class>
     <class>itson.dogosjpa.model.Pedidos</class>
+    <class>itson.dogosjpa.model.DetallePedido</class>
     <properties>
       <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/mysql?zeroDateTimeBehavior=CONVERT_TO_NULL"/>
       <property name="jakarta.persistence.jdbc.user" value="root"/>

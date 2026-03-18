@@ -1,8 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
 package itson.dogosjpa;
+
+import jakarta.persistence.*;
 
 /**
  *
@@ -11,6 +9,8 @@ package itson.dogosjpa;
 public class DogosJPA {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("DogosPU");
+        EntityManager em = emf.createEntityManager();
+
     }
 }
