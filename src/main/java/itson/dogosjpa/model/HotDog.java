@@ -8,44 +8,47 @@ import java.io.Serializable;
  * @author Ricardo
  */
 @Entity
+@Table(name = "hotdogs")
 public class HotDog implements Serializable {
-
-    private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String nombre;
+    private Double precio;
+
+    @Transient
+    private Double iva;
+
     public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (id != null ? id.hashCode() : 0);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof HotDog)) {
-            return false;
-        }
-        HotDog other = (HotDog) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public String toString() {
-        return "itson.dogosjpa.model.HotDog[ id=" + id + " ]";
+        return id; 
     }
     
+    public void setId(Long id) {
+        this.id = id; 
+    }
+
+    public String getNombre() {
+        return nombre; 
+    }
+    
+    public void setNombre(String nombre) {
+        this.nombre = nombre; 
+    }
+
+    public Double getPrecio() {
+        return precio; 
+    }
+    
+    public void setPrecio(Double precio) {
+        this.precio = precio; 
+    }
+
+    public Double getIva() {
+        return iva; 
+    }
+    
+    public void setIva(Double iva) {
+        this.iva = iva; 
+    }
 }
